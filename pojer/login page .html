@@ -1,0 +1,61 @@
+<?php
+// صفحة تسجيل الدخول (login.php)
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header("Location: home.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>شبكتي - تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2575fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">شبكتي</div>
+        <form action="login_process.php" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">البريد الإلكتروني</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">كلمة المرور</label>
+                <input type="password" class="form-control" name="password" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+            </div>
+        </form>
+        <div class="mt-3 text-center">
+            ليس لديك حساب؟ <a href="register.php">أنشئ حساباً</a>
+        </div>
+    </div>
+</body>
+</html>

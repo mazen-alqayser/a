@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAZEN ALQAYSER IT ENGINEERING - AI DEVELOPER</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,6 +14,12 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a1351543ed.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Devicon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <style>
         :root {
             --sidebar-bg: #2C3E50;
@@ -32,24 +39,7 @@
         .cv-sidebar {
             background-color: var(--sidebar-bg);
             color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 20rem;
             z-index: 10;
-        }
-
-        @media (max-width: 768px) {
-            .cv-sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-            }
-
-            .cv-main {
-                margin-left: 0 !important;
-            }
         }
 
         .section-heading {
@@ -115,24 +105,26 @@
             color: transparent;
         }
 
-       .ai-border {
-    border: 4px solid transparent;
-    border-image: linear-gradient(135deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    animation: borderMove 3s linear infinite; /* هنا الحركة */
-}
+        .ai-border {
+            border: 4px solid transparent;
+            border-image: linear-gradient(135deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            animation: borderMove 3s linear infinite;
+        }
 
-@keyframes borderMove {
-    0% {
-        border-image: linear-gradient(0deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-    50% {
-        border-image: linear-gradient(180deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-    100% {
-        border-image: linear-gradient(360deg, var(--ai-color-light), var(--ai-color-dark)) 1;
-    }
-}
+        @keyframes borderMove {
 
+            0% {
+                border-image: linear-gradient(0deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+
+            50% {
+                border-image: linear-gradient(180deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+
+            100% {
+                border-image: linear-gradient(360deg, var(--ai-color-light), var(--ai-color-dark)) 1;
+            }
+        }
 
         .x-icon {
             color: #000;
@@ -243,44 +235,68 @@
         <div class="robot-head"></div>
     </div>
 
-<nav id="sideNav" class="cv-sidebar flex flex-col items-center justify-center p-8 text-center md:h-screen md:fixed md:top-0 md:left-0 md:items-center md:justify-center">
-    <div class="mb-5 md:mb-10">
-        <img class="w-40 h-40 mx-auto mb-2 ai-border object-cover" 
-             src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG" 
-             alt="Mazen Mohamed Siddig">
-        <h1 class="text-3xl font-bold text-white section-heading text-center">MAZEN MOHAMED SIDDIG</h1>
-        <p class="text-xl font-bold text-white section-heading text-center">IT Engineer and AI Developer</p>
-    </div>
-    
-    <!-- Navigation Links -->
-    <ul class="flex flex-col space-y-4 items-center justify-center text-center w-full">
-        <li><a class="nav-link text-white hover:text-gray-300" href="#about">ABOUT</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#education">EDUCATION</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#skills">SKILLS</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#certificates">CERTIFICATES</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#organizations">ORGANIZATIONS</a></li>
-        <li><a class="nav-link text-white hover:text-gray-300" href="#projects">PROJECTS</a></li>
-    </ul>
+    <nav id="sideNav"
+        class="cv-sidebar hidden md:flex flex-col items-center justify-center p-8 text-center md:h-screen md:fixed md:top-0 md:left-0 md:items-center md:justify-center">
+        <div class="mb-5 md:mb-10">
+            <img class="w-40 h-40 mx-auto mb-2 ai-border object-cover"
+                src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG"
+                alt="Mazen Mohamed Siddig">
+            <h1 class="text-3xl font-bold text-white section-heading text-center">MAZEN MOHAMED SIDDIG</h1>
+            <p class="text-xl font-bold text-white section-heading text-center">IT Engineer and AI Developer</p>
+        </div>
 
-    <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
-   class="pdf-button hidden md:block" download>PDF VERSION</a>
-</nav>
+        <ul class="flex flex-col space-y-4 items-center justify-center text-center w-full">
+            <li><a class="nav-link text-white hover:text-gray-300" href="#about">ABOUT</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#education">EDUCATION</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#skills">SKILLS</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#certificates">CERTIFICATES</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#organizations">ORGANIZATIONS</a></li>
+            <li><a class="nav-link text-white hover:text-gray-300" href="#projects">PROJECTS</a></li>
+        </ul>
 
+        <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
+            class="pdf-button mt-6 w-full" download>PDF VERSION</a>
+    </nav>
+
+    <header class="md:hidden bg-white shadow-md p-4 flex flex-col items-center">
+        <div class="flex items-center space-x-4 mb-4">
+            <img class="w-16 h-16 ai-border object-cover"
+                src="https://raw.githubusercontent.com/mazen-alqayser/a/main/IMG_7990%5B1%5D%20-%20Copy.JPG"
+                alt="Mazen Mohamed Siddig">
+            <h1 class="text-2xl font-bold ai-gradient section-heading">MAZEN ALQAYSER</h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#about">ABOUT</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#education">EDUCATION</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#skills">SKILLS</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#certificates">CERTIFICATES</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#organizations">ORGANIZATIONS</a>
+            <a class="nav-link bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-full text-sm"
+                href="#projects">PROJECTS</a>
+        </div>
+        <a href="https://raw.githubusercontent.com/mazen-alqayser/a/main/MAZEN%20ALQAYSER%20IT%20ENGINEERING%20-%20AI%20DEVELOPER.pdf"
+            class="pdf-button w-full" download>PDF VERSION</a>
+    </header>
 
     <main class="cv-main min-h-screen p-8 md:p-16 md:ml-[20rem] flex-grow">
         <div class="max-w-4xl mx-auto">
             <section id="about" class="mb-12">
                 <h1 class="text-4xl lg:text-5xl font-bold section-heading">
-                    <span class="ai-gradient">MAZEN  ALQAYSER MOHAMED SIDDIG</span>
+                    <span class="ai-gradient">MAZEN ALQAYSER MOHAMED SIDDIG</span>
                 </h1>
                 <h2 class="text-3xl font-bold section-heading mb-4">IT Engineer - AI Developer</h2>
-
-                <div class="subheading mb-3 flex items-center space-x-6">
+                <div
+                    class="subheading mb-3 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-6">
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-envelope text-primary-color"></i>
                         <span class="text-primary-color">mazen.alqayser@icloud.com</span>
                     </div>
-
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-phone text-primary-color"></i>
                         <span class="text-primary-color">+201124592083</span>
@@ -289,31 +305,26 @@
             </section>
         </div>
 
-                       
-        <div class="flex gap-8 mb-6 justify-center items-center">
+        <div class="flex gap-8 mb-6 justify-center items-center flex-wrap">
             <a href="https://www.facebook.com/mazealqayser/" target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على Facebook">
                 <i class="fa-brands fa-facebook-f text-3xl"></i>
             </a>
-
             <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-mazen-alqayser-929304213/"
                 target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على LinkedIn">
                 <i class="fa-brands fa-linkedin-in text-3xl"></i>
             </a>
-
             <a href="https://github.com/mazen-alqayser" target="_blank"
                 class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-800 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition duration-300"
                 title="تابعني على GitHub">
                 <i class="fa-brands fa-github text-3xl"></i>
             </a>
-
         </div>
 
-                   
-                   <p class="lead mb-4 text-justify">
+        <p class="lead mb-4 text-justify">
             <span class="font-bold text-lg">AI & Software Development Specialist</span> with extensive experience in
             <strong>end-to-end software engineering</strong>, <strong>cloud computing</strong>, and
             <strong>mobile app development</strong>. Proven track record in building <strong>intelligent
@@ -369,151 +380,207 @@
             </div>
         </section>
 
-
-                   
         <hr class="border-t border-gray-300 my-8">
-        <section id="skills" class="mb-12">
-            <h2 class="text-4xl font-bold section-heading mb-6">Skills</h2>
 
-            <div class="mb-6">
-                <div class="text-2xl font-bold section-heading mb-2">Programming & Development</div>
-                <ul class="flex flex-wrap list-none space-x-4 text-3xl">
-                    <li title="HTML5"><i class="fab fa-html5 text-orange-500"></i></li>
-                    <li title="CSS3"><i class="fab fa-css3-alt text-blue-500"></i></li>
-                    <li title="JavaScript"><i class="fab fa-js-square text-yellow-500"></i></li>
-                    <li title="Python"><i class="fab fa-python text-blue-700"></i></li>
-                    <li title="PHP"><i class="fab fa-php text-purple-600"></i></li>
-                </ul>
-                <p class="mt-3 text-lg text-gray-700">
-                    HTML, CSS, AI tools, Python, PHP, SQL, JavaScript
-                </p>
-            </div>
+     <section id="skills" class="mb-16">
+  <h2 class="text-4xl font-bold section-heading mb-10">Skills</h2>
 
-            <div class="mb-6">
-                <div class="text-2xl font-bold section-heading mb-2">AI Development</div>
-                <ul class="list-disc pl-6 text-lg text-gray-700">
-                    <li>AI developer and applications of AI</li>
-                    <li>Technical skills: Git, GitHub, Version Control</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="text-2xl font-bold section-heading mb-2">Multimedia & E-commerce</div>
-                <ul class="list-disc pl-6 text-lg text-gray-700">
-                    <li>Canva, Video Editing, Logo Design, E-marketing, E-commerce</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <div class="text-2xl font-bold section-heading mb-2">Other Skills</div>
-                <ul class="list-disc pl-6 text-lg text-gray-700">
-                    <li><strong>Networking & IT:</strong> Remote Access, CCNA (Beginner), ICDL, Computer & Network
-                        Administration</li>
-                    <li><strong>Mobile Development:</strong> Meta & Zain Sudan Certified, React Native, Cross-platform
-                        Apps</li>
-                    <li><strong>AI & Software Development:</strong> IBM Certified (AI & Software Developer), Generative
-                        AI, LLMs, Machine Learning Basics</li>
-                    <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Django, Flask</li>
-                    <li><strong>Cloud & DevOps:</strong> Docker, Kubernetes, CI/CD, Cloud Security, DevSecOps</li>
-                    <li><strong>Database Management:</strong> SQL, NoSQL</li>
-                    <li><strong>Professional Skills:</strong> Communication, Presentation, Negotiation, Agile Project
-                        Management</li>
-                    <li><strong>Teamwork & Problem Solving:</strong> Work in groups, creativity, critical thinking</li>
-                </ul>
-            </div>
-        </section>
-
-
-                     </div>
-</section>
-
-<hr class="border-t border-gray-300 my-8">
-
-<section id="certificates" class="mb-12">
-    <h2 class="text-4xl font-bold section-heading mb-6 text-left
-">Certificates</h2>
-    <ul class="space-y-3 text-left">
-        <li>
-            <span class="font-bold text-lg">IBM Full-Stack Developer</span>
-            <span class="text-gray-600"> | 15 Certificates</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">IBM AI Developer</span>
-            <span class="text-gray-600"> | 10 Certificates</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">IBM AI Developer Badge</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">React Native and Mobile Developer</span>
-            <span class="text-gray-600"> | Meta</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Software Developer Reference</span>
-            <span class="text-gray-600"> | IBM</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Supervisor</span>
-            <span class="text-gray-600"> | Aldahab Company</span>
-        </li>
-        <li>
-            <span class="font-bold text-lg">Build a Mobile App with Google Sheets</span>
-            <span class="text-gray-600"> | Glide (No Coding)</span>
-        </li>
+  <!-- Programming & Development -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Programming & Development</h3>
+    <ul class="flex flex-wrap gap-6 text-4xl text-gray-700">
+      <li title="HTML5"><i class="devicon-html5-plain colored"></i></li>
+      <li title="CSS3"><i class="devicon-css3-plain colored"></i></li>
+      <li title="JavaScript"><i class="devicon-javascript-plain colored"></i></li>
+      <li title="Python"><i class="devicon-python-plain colored"></i></li>
+      <li title="PHP"><i class="devicon-php-plain colored"></i></li>
+      <li title="Node.js"><i class="devicon-nodejs-plain colored"></i></li>
     </ul>
-</section>
+    <p class="mt-3 text-lg text-gray-700">
+      <strong>Python</strong>, <strong>JavaScript</strong>, Node.js, PHP, HTML, CSS, SQL
+    </p>
+  </div>
 
-<section id="badges" class="mb-12">
-  <h2 class="text-4xl font-bold section-heading mb-6 text-center">Professional Badges</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-<!-- Badge 1: IBM AI Developer -->
-<div class="flex flex-col items-center space-y-2">
-  <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" 
-     target="_blank" 
-     class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-blue-500 hover:shadow-2xl">
+  <!-- AI Development -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Artificial Intelligence & Software Development</h3>
+    <ul class="list-disc pl-6 text-lg text-gray-700 leading-relaxed">
+      <li><strong>Generative AI</strong>, <strong>LLMs</strong>, ChatGPT, OpenAI</li>
+      <li><strong>Machine Learning</strong>, Deep Learning, NLP, Predictive Analytics</li>
+      <li>Prompt Engineering, AI Applications, Supervised Learning</li>
+      <li>IBM Certified AI & Full-Stack Development</li>
+      <li>Technical Tools: <strong>Git</strong>, GitHub, Version Control</li>
+    </ul>
+  </div>
 
-      <img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png" 
-           alt="IBM AI Developer Badge" 
-           class="w-20 h-20 object-contain">
-  </a>
-  <!-- اسم الشارة خارج الدائرة -->
-  <span class="text-sm font-semibold text-blue-700">
-      IBM AI Developer
-  </span>
-</div>
+  <!-- Web Development -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+    <ul class="flex flex-wrap gap-6 text-4xl text-gray-700">
+      <li><i class="devicon-react-original colored" title="React.js"></i></li>
+      <li><i class="devicon-redux-original colored" title="Redux"></i></li>
+      <li><i class="devicon-django-plain colored" title="Django"></i></li>
+      <li><i class="devicon-flask-original colored" title="Flask"></i></li>
+      <li><i class="devicon-bootstrap-plain colored" title="Bootstrap"></i></li>
+      <li><i class="devicon-sass-original colored" title="Sass"></i></li>
+    </ul>
+    <p class="mt-3 text-lg text-gray-700">
+      <strong>React.js</strong>, Redux, Django, Flask, RESTful APIs, Full-Stack, Front-End, Back-End, UI/UX
+    </p>
+  </div>
 
-<!-- Badge 2: React -->
-<div class="flex flex-col items-center space-y-2">
-  <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" 
-     target="_blank" 
-     class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-green-500 hover:shadow-2xl">
+  <!-- Mobile Development -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Mobile Development</h3>
+    <ul class="flex flex-wrap gap-6 text-4xl text-gray-700">
+      <li><i class="devicon-react-original colored" title="React Native"></i></li>
+      <li><i class="devicon-android-plain colored" title="Android"></i></li>
+      <li><i class="devicon-kotlin-plain colored" title="Kotlin"></i></li>
+      <li><i class="devicon-swift-plain colored" title="Swift"></i></li>
+    </ul>
+    <p class="mt-3 text-lg text-gray-700">
+      Meta & Zain Sudan Certified, <strong>React Native</strong>, Cross-platform Apps, Android, Kotlin, Swift, Google Glide
+    </p>
+  </div>
 
-      <img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png" 
-           alt="Front-end Development with React V2" 
-           class="w-20 h-20 object-contain">
-  </a>
-  <!-- اسم الشارة خارج الدائرة -->
-  <span class="text-sm font-semibold text-orange-700">
-      Front-End React Developer
-  </span>
-</div>
+  <!-- Cloud & DevOps -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Cloud & DevOps</h3>
+    <ul class="flex flex-wrap gap-6 text-4xl text-gray-700">
+      <li><i class="devicon-docker-plain colored" title="Docker"></i></li>
+      <li><i class="devicon-kubernetes-plain colored" title="Kubernetes"></i></li>
+      <li><i class="devicon-amazonwebservices-plain colored" title="AWS"></i></li>
+      <li><i class="devicon-azure-plain colored" title="Azure"></i></li>
+      <li><i class="devicon-linux-plain colored" title="Linux"></i></li>
+      <li><i class="devicon-terraform-plain colored" title="Terraform"></i></li>
+    </ul>
+    <p class="mt-3 text-lg text-gray-700">
+      <strong>Cloud Computing</strong>, <strong>DevOps</strong>, Docker, Kubernetes, AWS, Azure, CI/CD, DevSecOps, Cloud Security, OpenShift, Istio, Hybrid Cloud
+    </p>
+  </div>
 
+  <!-- Databases -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Database Management</h3>
+    <ul class="flex flex-wrap gap-6 text-4xl text-gray-700">
+      <li><i class="devicon-mysql-plain colored" title="MySQL"></i></li>
+      <li><i class="devicon-postgresql-plain colored" title="PostgreSQL"></i></li>
+      <li><i class="devicon-mongodb-plain colored" title="MongoDB"></i></li>
+      <li><i class="devicon-firebase-plain colored" title="Firebase"></i></li>
+    </ul>
+    <p class="mt-3 text-lg text-gray-700">
+      <strong>SQL</strong>, <strong>NoSQL</strong>, Firebase, Supabase, Relational Databases, Database Systems, ORM, Database Development
+    </p>
+  </div>
+
+  <!-- Networking & IT -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Networking & IT</h3>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Remote Access, CCNA (Beginner), ICDL, Network Administration, CLI, Linux Commands, File Management, Virtual Environment, OS & IDEs, Documentation
+    </p>
+  </div>
+
+  <!-- Teamwork & Problem Solving -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Teamwork & Problem Solving</h3>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      <strong>Git</strong>, <strong>GitHub</strong>, GitLab, Bitbucket, Version Control, Collaboration, Creativity, Critical Thinking, Code Review, Software Testing, QA, Unit Testing, Jest
+    </p>
+  </div>
+
+  <!-- Professional Skills -->
+  <div class="mb-10">
+    <h3 class="text-2xl font-bold mb-4">Professional Skills</h3>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Communication, Presentation, Negotiation, Agile Project Management, Organizational Development, Application Lifecycle Management, Professional Networking (LinkedIn)
+    </p>
+  </div>
+
+  <!-- SDLC Models -->
+  <div>
+    <h3 class="text-2xl font-bold mb-4">Software Development Life Cycle (SDLC) Models</h3>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Waterfall, <strong>Agile</strong>, V-Model, Iterative Model, Spiral Model, Big Bang Model, <strong>DevOps</strong>
+    </p>
   </div>
 </section>
 
 
-
-                   
         <hr class="border-t border-gray-300 my-8">
-                   
-                  <section id="organizations" class="mb-12">
+
+        <section id="certificates" class="mb-12">
+            <h2 class="text-4xl font-bold section-heading mb-6 text-left">Certificates</h2>
+            <ul class="space-y-3 text-left">
+                <li>
+                    <span class="font-bold text-lg">IBM Full-Stack Developer</span>
+                    <span class="text-gray-600"> | 15 Certificates</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">IBM AI Developer</span>
+                    <span class="text-gray-600"> | 10 Certificates</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">IBM AI Developer Badge</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">React Native and Mobile Developer</span>
+                    <span class="text-gray-600"> | Meta</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Software Developer Reference</span>
+                    <span class="text-gray-600"> | IBM</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Supervisor</span>
+                    <span class="text-gray-600"> | Aldahab Company</span>
+                </li>
+                <li>
+                    <span class="font-bold text-lg">Build a Mobile App with Google Sheets</span>
+                    <span class="text-gray-600"> | Glide (No Coding)</span>
+                </li>
+            </ul>
+        </section>
+
+ <section id="badges" class="mb-12">
+    <h2 class="text-4xl font-bold section-heading mb-6 text-center">Professional Badges</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div class="flex flex-col items-center space-y-2">
+            <a href="https://www.credly.com/badges/47809561-0931-433e-b094-cc29df7a7655" target="_blank"
+                class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-blue-500 hover:shadow-2xl">
+                <img src="https://images.credly.com/size/680x680/images/70675aed-31be-4c30-add7-b99905a34005/image.png"
+                    alt="IBM AI Developer Badge" class="w-20 h-20 object-contain">
+            </a>
+            <span class="text-sm font-semibold text-blue-700">IBM AI Developer</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <a href="https://www.credly.com/badges/ffa6789f-1e20-465b-bd76-d41934653ad4" target="_blank"
+                class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-green-500 hover:shadow-2xl">
+                <img src="https://images.credly.com/size/680x680/images/e747147a-9300-4795-8b38-704a133bed88/Coursera_20Front_20end_20Development_20with_20React_20V2.png"
+                    alt="Front-end Development with React V2" class="w-20 h-20 object-contain">
+            </a>
+            <span class="text-sm font-semibold text-orange-700">Front-End React Developer</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <a href="https://www.credly.com/badges/faddf893-03ee-4356-becd-72acd4efb98b" target="_blank"
+                class="group w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg border-4 border-gray-200 transform transition hover:scale-110 hover:border-purple-500 hover:shadow-2xl">
+                <img src="https://images.credly.com/size/680x680/images/17add978-0cea-40e8-8832-9492fc7c260b/Coursera_20Full_20Stack_20Software_20Developer_20Prof_20Cert_20V5.png"
+                    alt="IBM Full Stack Software Developer Badge" class="w-20 h-20 object-contain">
+            </a>
+            <span class="text-sm font-semibold text-purple-700">IBM Full Stack Software Developer</span>
+        </div>
+    </div>
+</section>
+
+        <hr class="border-t border-gray-300 my-8">
+
+        <section id="organizations" class="mb-12">
             <h2 class="text-4xl font-bold section-heading mb-6">Organizations</h2>
             <ul class="space-y-3">
                 <li>
                     <span class="font-bold text-lg">Terre des Hommes</span>
                     <span class="text-gray-600"> | Volunteer – ICDL Course</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Samarat</span>
                     <span class="text-gray-600"> | Volunteer</span>
@@ -521,49 +588,41 @@
             </ul>
         </section>
 
-                   
         <hr class="border-t border-gray-300 my-8">
 
-                    <section id="projects" class="mb-12">
+        <section id="projects" class="mb-12">
             <h2 class="text-4xl font-bold section-heading mb-6">Projects</h2>
             <ul class="space-y-4">
                 <li>
                     <span class="font-bold text-lg">AI Chatbot – TDH Assistant Community Platform</span>
                     <span class="text-gray-600"> | Terre des hommes</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Jinja 1 Full Accounting App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Work Hub App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Social Media App</span>
                     <span class="text-gray-600"> | Own Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Air-Ticket-Reservation System</span>
                     <span class="text-gray-600"> | University Project</span>
                 </li>
-
                 <li>
                     <span class="font-bold text-lg">Online Sweets Store</span>
                     <span class="text-gray-600"> | University Project</span>
                 </li>
-
                 <li>
                     <span class="italic text-gray-600">(More than 10+ other projects)</span>
                 </li>
             </ul>
         </section>
-
-                </div>
+        </div>
     </main>
 
     <script>
@@ -572,12 +631,10 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const robotContainer = document.getElementById('robot-container');
 
-            // Show robot after a short delay
             setTimeout(() => {
                 robotContainer.classList.add('visible');
             }, 500);
 
-            // Hide robot when scrolling
             let lastScrollY = window.scrollY;
             window.addEventListener('scroll', () => {
                 if (window.scrollY > lastScrollY) {
@@ -588,7 +645,6 @@
                 lastScrollY = window.scrollY;
             });
 
-            // Smooth scroll and active link
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -606,7 +662,6 @@
                 });
             });
 
-            // Intersection Observer to handle active link on scroll
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     const id = entry.target.getAttribute('id');
